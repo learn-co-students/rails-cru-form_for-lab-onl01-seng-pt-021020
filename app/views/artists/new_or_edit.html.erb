@@ -1,0 +1,17 @@
+<%= form_for @artist do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+
+  <br><br>
+
+  <%= f.label :bio %><br>
+  <%= f.text_area :bio %>
+
+  <br>
+
+  <% if @artist.id.nil? %>
+    <%= f.submit 'Create Artist' %>
+  <% else %>
+    <%= f.submit 'Update Artist' %>
+  <% end %>
+<% end %>
